@@ -1,0 +1,87 @@
+\documentclass{article}
+
+
+\usepackage{geometry}
+% \geometry{a4paper}
+% \usepackage{array}
+\usepackage{longtable}
+\usepackage{graphicx}
+\usepackage{lipsum}  % For placeholder text, optional
+\usepackage{caption}
+\usepackage{rotating} % to rotate the figure sideways
+\usepackage{setspace}
+
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{array}
+\usepackage{pdflscape}
+
+\title{Main Document with Included Tables}
+\author{Author Name}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+This document demonstrates including tables from separate `.tex` files.
+
+
+% \begin{table}
+%     \centering
+%     \begin{tabular}{ccccc}
+%         nm & n & j & k & \\
+
+%     \end{tabular}
+%     \caption{Caption}
+%     \label{tab:my_label}
+% \end{table}
+% \newpage
+\section{Tables}
+% Include each table file here using \input
+
+\newpage
+\section{Table 1}
+\input{Test/t_2_1}
+
+\newgeometry{left=4cm, right=2cm, top=3cm, bottom=2cm}
+\begin{landscape} % Start landscape mode for the page
+\newpage
+\section{Table 2}
+\input{Test/t_2_2}
+\end{landscape}
+\restoregeometry
+
+
+\newgeometry{left=4cm, right=2cm, top=5cm, bottom=2cm}
+\begin{landscape} % Start landscape mode for the page
+\newpage
+\section{Table 3}
+\input{Test/t_3_1}
+\end{landscape}
+\restoregeometry
+
+
+
+\newgeometry{left=4cm, right=2cm, top=3cm, bottom=2cm}
+% \begin{landscape} % Start landscape mode for the page
+% \hspace{4cm}
+% \newpage
+\section{Table 4}
+\input{Test/t_3_2}
+% \end{landscape}
+\restoregeometry
+
+
+\newgeometry{left=4cm, right=2cm, top=3cm, bottom=2cm}
+\begin{landscape} 
+\newpage
+\section{Table 5}
+\input{Test/t_4_1}
+\restoregeometry
+\end{landscape} 
+
+
+
+\end{document}

@@ -1,0 +1,120 @@
+% \documentclass[12pt, letterpaper]{report}
+
+% \usepackage{showframe} % Optional: visualize frame margins
+
+%\geometry{top=3cm, bottom=3cm, left=4cm, right=2cm} % Adjust as needed
+
+% Set Roman numeral page numbering
+%\pagenumbering{roman}
+
+% Apply 1.5 line spacing
+\onehalfspacing
+
+% Define page style with header for the first page
+\fancypagestyle{firstpage}{
+    \fancyhf{} % Clear header and footer
+    %\setlength{\headheight}{2cm} % Adjust height of the header
+    %\setlength{\headsep}{0.5cm} % Space between header and body text
+
+    \fancyhead[R]{%
+        \textbf{\thepage} \\ % Page number first
+        \vspace{0.1cm} % Slight space below the page number
+        \textcolor{gray}{\textbf{\small Form No: PH12}} \\ % Form No in gray below page number
+        \vspace{0.1cm} % Optional: add space below the Form No
+        \includegraphics[width=16cm]{Logos/certificate header-Trans.png} % Logo centered in the header
+    }
+    
+    \fancyfoot[C]{} % Blank footer
+    \renewcommand{\headrulewidth}{0pt} % No header line
+    \renewcommand{\footrulewidth}{0pt} % No footer line
+}
+
+% Define a page style for subsequent pages with top-right page number
+
+\fancypagestyle{otherpages}{
+    \fancyhf{} % Clear header and footer
+    \fancyhead[R]{\textbf{\thepage}} % Page number at top right, bold
+    \renewcommand{\headrulewidth}{0pt} % No header line
+    \renewcommand{\footrulewidth}{0pt} % No footer line
+    \setlength{\headheight}{6pt} % Reduced header height
+    \setlength{\topmargin}{-1.5cm}
+    %\pagenumbering{roman} % Use Roman page numbers
+}
+
+%%%%%%%%%%%%%%%%%%%FIRST PAGE%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{document}
+
+% Apply the first page style with the letterhead
+\thispagestyle{firstpage}
+
+% Add vertical space at the top
+%\vspace*{0.5cm} % Adjust spacing before the title section
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%TITLE%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Title Section
+\begin{center}
+    {\textbf{\color{red}\large COPYRIGHT AND CONSENT FORM}}
+\end{center}
+% \vspace{0.5cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%MATTER%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setlength{\parskip}{1em} % Adjust paragraph spacing
+\setstretch{1}
+
+\noindent
+\justifying
+
+To ensure uniformity of treatment among all contributors, other forms may not be substituted for this form, nor may any wording of the form be changed. This form is intended for original material submitted to the IIT (ISM), Dhanbad and must accompany any such material in order to be published by the ISM. Please read the form carefully and keep a copy for your files.\par
+
+\vspace{0.3cm}
+\noindent
+\textbf{TITLE OF THESIS}: “YOUR THESIS TITLE IS HERE”\par
+
+\vspace{0.3cm}
+\noindent
+\textbf{AUTHOR'S NAME \& ADDRESS: }: YOUR ADDRESS with PINCODE 
+
+\begin{center}
+    \textbf{COPYRIGHT TRANSFER}
+\end{center}
+
+%%%%%%%%%%%%%%%%%%BULLETS%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{enumerate}
+    \item The undersigned hereby assigns to Indian Institute of Technology (Indian School of Mines), Dhanbad all rights under copyright that may exist in and to: (a) the above Work, including any revised or expanded derivative works submitted to the ISM by the undersigned based on the work; and (b) any associated written or multimedia components or other enhancements accompanying the work.\\
+    % \newpage
+    
+    \item[] \hspace*{1cm} \makebox[4.5cm][r]{\textbf{CONSENT AND RELEASE}}
+
+    \item  In the event the undersigned makes a presentation based upon the work at a conference hosted or sponsored in whole or in part by the IIT (ISM) Dhanbad, the undersigned, in consideration for his/her participation in the conference, hereby grants the ISM the unlimited, worldwide, irrevocable permission to use, distribute, publish, license, exhibit, record, digitize, broadcast, reproduce and archive; in any format or medium, whether now known or hereafter developed:(a) his/her presentation and comments at the conference; (b) any written materials or multimedia files used in connection with his/her presentation; and (c) any recorded interviews of him/her (collectively, the "Presentation"). The permission granted includes the transcription 
+    and reproduction of the Presentation for inclusion in products sold or distributed by IIT(ISM) Dhanbad and live or recorded broadcast of the Presentation during or after the conference.
+    \\  
+    %%%%%%%%%%%%%%%%%%%%NEW PAGE%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \newpage
+    % \vspace{5cm}
+    \thispagestyle{otherpages} % Apply the other pages style
+    \item In connection with the permission granted in Section 2, the undersigned hereby grants IIT (ISM) Dhanbad the unlimited, worldwide, irrevocable right to use his/her name, picture, likeness, voice and biographical information as part of the advertisement, distribution and sale of products incorporating the Work or Presentation, and releases IIT (ISM) Dhanbad from any claim based on right of privacy or publicity.
+
+    \item  The undersigned hereby warrants that the Work and Presentation (collectively, the "Materials") are original and that he/she is the author of the Materials. To the extent the Materials incorporate text passages, figures, data or other material from the works of others, the undersigned has obtained any necessary permissions. Where necessary, the undersigned has obtained all third-party permissions and consents to grant the license above and has provided copies of such permissions and consents to IIT (ISM) Dhanbad.
+
+\end{enumerate}
+
+
+
+\begin{itemize}
+\item[] \makebox[4.5cm][r]{\textbf{GENERAL TERMS}}
+    \renewcommand{\labelitemi}{\textasteriskcentered} % Use asterisk as bullet symbol
+    \item The undersigned represents that he/she has the power and authority to make and execute this assignment.
+    \item The undersigned agrees to indemnify and hold harmless the IIT (ISM) Dhanbad from any damage or expense that may arise in the event of a breach of any of the warranties set forth above.
+    \item  In the event the above work is not accepted and published by the IIT (ISM) Dhanbad or is withdrawn by the author(s) before acceptance by the IIT(ISM) Dhanbad, the foregoing copyright transfer shall become null and void and all materials embodying the Work submitted to the IIT(ISM) Dhanbad will be destroyed.
+    \item For jointly authored Works, all joint authors should sign, or one of the authors should sign as an authorized agent for the others. 
+\end{itemize}
+
+\vspace{0.5cm}
+
+% Signature line for Vivek G Babu
+\begin{flushright}
+    % \noindent\makebox[1.6in]{\hrulefill} \\ % Creates a horizontal line 2 inches wide
+    {Signature of the Author} % Align this text below the line
+\end{flushright}
+
+% \end{document}

@@ -1,0 +1,39 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+\begin{flushleft}
+
+\begin{table}[ht]
+\small % Adjust font size for better fit
+\renewcommand{\arraystretch}{1.5} % Adjust row height slightly
+\caption{}
+\resizebox{\textwidth}{!}
+{
+\label{tab:my-table}
+\begin{tabular}{p{2cm}lllp{0.5cm}lllllllllllllp{1.2cm}p{2.5cm}}
+\hline
+\multirow{2}{*}{Region} & \multirow{2}{*}{Zone \#} & \multirow{2}{*}{Depth (km)} & \multirow{2}{*}{\parbox{1cm}{\#of FMSs}} & \multicolumn{9}{l}{\centering Stress Tensor   Parameters} & \multirow{2}{*}{R'} & \multirow{2}{*}{\parbox{1cm}{\(SH_{max}\\ azi\)}} & \multirow{2}{*}{\parbox{3cm}{Stress regime}} \\
+\cline{5-13}
+ &  &  &  & \(\sigma_1\) azi & \(\sigma_1\) pl & \(\sigma_2\) azi & \(\sigma_2\) pl & \(\sigma_3\) azi & \(\sigma_3\) pl & R & \phi & \mu &  &  &  \\ \hline
+ 
+\multirow{3}{*}{\parbox{3.5cm}{Sibi trough\\ and \\ Sulaiman ranges}} & 1 & 30 & 14 & 173.3 & 27 & 36.1 & 55.3 & 274 & 20.2 & 0.7 & 0.3 & 0.6 & 1.7 & 177 & Pure SS-TransPression \\
+ & 2 & 35 & 16 & 172.9 & 6.1 & 263.4 & 4.7 & 30.7 & 82.3 & 0.6 & 0.4 & 0.8 & 2.4 & 173 & Pure Compression \\
+ & 3 & 30 & 22 & 136.1 & 6.8 & 229.5 & 25.8 & 32.4 & 63.2 & 0.9 & 0.1 & 0.5 & 2.1 & 136 & TransPression \\ \hline
+Hindukush & 4 & Up to 70 & 40 & 134.7 & 0.3 & 224.7 & 6.2 & 41.8 & 83.8 & 0.7 & 0.3 & 0.7 & 2.3 & 135 & TransPression-Pure Compression \\ \hline
+Pamir & 5 & Up to 70 & 35 & 166.1 & 7.2 & 335.1 & 82.7 & 76 & 1.4 & 0.4 & 0.6 & 0.6 & 1.4 & 166 & Pure SS \\ \hline
+Hindukush & 6 & 70-160 & 117 & 150.5 & 3.7 & 241.2 & 11.1 & 42.2 & 78.3 & 0.7 & 0.3 & 0.8 & 2.3 & 150 & TransPression-Pure Compression \\ \hline
+Pamir & 7 & 70-160 & 30 & 327.2 & 35.1 & 227.8 & 13.2 & 120.5 & 51.8 & 0.9 & 0.1 & 0.6 & 2.1 & 149 & TransPression \\ \hline
+Hindukush & 8 & 160-300 & 171 & 175.1 & 6.4 & 84.5 & 4.7 & 318.2 & 82.1 & 0.3 & 0.7 & 0.7 & 2.7 & 176 & Pure Compression-Radial Compression \\ \hline
+Nanga   Parbat Syntaxis & 9 & 35 & 11 & 326.3 & 82.8 & 60.7 & 0.5 & 150.8 & 7.1 & 0.5 & 0.5 & 0.4 & 0.5 & 61 & Pure Extension \\ \hline
+Hazara   syntaxis & 10 & 30 & 50 & 214.8 & 9 & 124 & 5.2 & 4 & 79.6 & 0.5 & 0.5 & 0.5 & 2.5 & 36 & Pure Compression \\ \hline
+Kishtwar-Zanskar & 12 & 35 & 20 & 222 & 23.8 & 131.6 & 1.1 & 39.1 & 66.2 & 0.8 & 0.2 & 0.8 & 2.2 & 42 & TransPression-Pure Compression \\ \hline
+Kangra-Chamba & 13 & 15 & 19 & 232.6 & 16.2 & 138.8 & 12.9 & 12 & 69.1 & 0.6 & 0.4 & 0.8 & 2.4 & 55 & Pure Compression \\ \hline
+Shimla-Kinnaur & 14 & 25 & 16 & 210.1 & 8.6 & 119.3 & 5.6 & 356.6 & 79.8 & 0.6 & 0.4 & 0.8 & 2.4 & 31 & Pure Compression \\ \hline
+Kaurik   Chango Rift & 15 & 30 & 15 & 176 & 69.5 & 319.9 & 16.8 & 53.4 & 11.4 & 0.8 & 0.2 & 0.7 & 0.2 & 154 & Radial Extension-Pure Extension \\ \hline
+Garwal & 16 & 30 & 16 & 204.1 & 8.4 & 112.2 & 12.8 & 326.6 & 74.7 & 0.6 & 0.4 & 0.5 & 2.4 & 25 & Pure Compression \\ \hline
+Kumaon & 17 & 30 & 35 & 209 & 0.8 & 118.9 & 8.5 & 304.3 & 81.4 & 0.4 & 0.6 & 0.8 & 2.6 & 29 & Pure Compression \\ \hline
+Karakoram   Fault region & 18 & 120 & 33 & 201.4 & 21 & 47.5 & 66.9 & 295 & 9.3 & 0.8 & 0.2 & 0.8 & 1.8 & 22 & Pure SS-TransPression \\ \hline
+Gozha-Ashikule   Fault region & 19 & 30 & 24 & 223.3 & 74.8 & 12.4 & 13.2 & 104.2 & 7.5 & 0.2 & 0.8 & 0.2 & 0.8 & 15 & Pure Extension-TransTension \\ \hline
+\end{tabular}
+}
+\end{table}
+\end{flushleft}

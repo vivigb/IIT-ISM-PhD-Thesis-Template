@@ -1,0 +1,124 @@
+\documentclass[12pt]{report}
+
+% #### Preamble: Include packages and formatting commands ###
+% --- Dimensions and Layout ---
+\usepackage{geometry}
+\geometry{
+    paperwidth=23cm, 
+    paperheight=29cm, 
+    top=3cm, 
+    bottom=3cm, 
+    left=4cm, 
+    right=2cm, 
+    textwidth=17cm, 
+    textheight=23cm, 
+    footskip=-12pt
+}
+
+% --- Core Packages ---
+\usepackage{amsmath}      % For equation environments
+\usepackage{graphicx}     % For including images
+\usepackage{setspace}     % For line spacing
+\usepackage{fancyhdr}     % For custom headers and footers
+\usepackage{titlesec}     % For customizing titles
+\usepackage{xcolor}       % For colored links
+\usepackage{hyperref}     % For hyperlinks
+\usepackage{cleveref}     % Enhanced cross-referencing
+\usepackage{longtable}    % For multi-page tables
+\usepackage{pdflscape}    % For landscape pages
+\usepackage{booktabs}     % For table formatting
+\usepackage{rotating}     % For rotated figures
+\usepackage[biber, style=numeric]{biblatex} % For bibliography
+\usepackage[acronym]{glossaries} % For acronyms
+
+
+% --- Fonts and Typography ---
+\usepackage{ragged2e}     % Justify
+\usepackage{times}        % Times New Roman font
+\usepackage{mathptmx}     % Math in Times font
+\setlength{\parskip}{1em} % Adjust paragraph spacing
+\setstretch{1.5}          % Adjust line spacing (1.5 for one-and-a-half spacing)
+
+% --- Bibliography ---
+\addbibresource{references_1.bib}
+
+% --- Page Style Customization ---
+\newcommand{\custompagestyle}[3]{
+    \fancypagestyle{#1}{
+        \fancyhf{} % Clear header/footer
+        \fancyhead[R]{\textbf{\thepage}} % Page number at top right
+        \renewcommand{\headrulewidth}{#2} % Header line width
+        \renewcommand{\footrulewidth}{#3} % Footer line width
+    }
+}
+\custompagestyle{Preamble_pages}{2cm}{0pt}
+\custompagestyle{chapters}{0.5pt}{0.5pt}
+\custompagestyle{plain}{0pt}{0pt}
+
+% --- Title and Section Formatting ---
+\titlespacing{\chapter}{20pt}{-20pt}{10pt} % Adjust chapter spacing
+\titleformat{\chapter}[display]
+    {\normalfont\bfseries\centering\fontsize{20}{30}\selectfont\vspace*{5cm}}
+    {\chaptername\ \thechapter}{1cm}{\fontsize{30}{35}\selectfont}
+
+% --- Custom Hyperref Settings ---
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    urlcolor=blue
+}
+\renewcommand{\chapterautorefname}{Chapter}
+
+% --- Glossaries ---
+\makeglossaries
+
+% Begin Document
+\begin{document}
+
+% --- Title Page ---
+\include{frontmatter/1_Titlepage}
+\pagenumbering{roman}
+
+% --- Preliminary Pages ---
+\pagestyle{Preamble_pages}
+\include{frontmatter/2_Certificate_supervisors}
+\include{frontmatter/3_Certificate_classified_data}
+\include{frontmatter/4_copyright_and_consent}
+\include{frontmatter/5_English_check}
+
+% --- Acknowledgement ---
+\pagestyle{chapters}
+\newgeometry{top=3cm, bottom=3cm, left=4cm, right=2cm}
+\include{frontmatter/6_Acknowledgement}
+\restoregeometry
+
+% --- Table of Contents, List of Tables, and Figures ---
+\renewcommand{\contentsname}{\centering Contents}
+\tableofcontents
+\listoftables
+\listoffigures
+
+% --- Abstract ---
+\include{frontmatter/11_Abstract}
+
+% --- Main Chapters ---
+\pagestyle{chapters}
+\pagenumbering{arabic}
+\include{chapters/Chapter1}
+\include{chapters/Chapter2}
+
+% --- Future Scope and Publications ---
+\begin{spacing}{1.1}
+    \titlespacing{\chapter}{10pt}{-3cm}{5pt}
+    \vspace{-3cm}
+    \include{endmatter/1_future_scope}
+    \include{endmatter/2_Publications}
+\end{spacing}
+
+% --- Bibliography ---
+\newpage
+\addcontentsline{toc}{chapter}{Bibliography}
+\printbibliography
+
+\end{document}
